@@ -10,6 +10,41 @@ In today's digital era, machine learning has become an essential tool for solvin
 
 Zero-KnowLedge Decision Tree Prediction (ZK-DTP) is designed to address this pressing issue by offering privacy-preserving predictions using decision tree models, built on top of RISC Zero's zkVM technology. ZK-DTP enables ML model providers to generate accurate predictions without revealing any sensitive information about the model or the input data.
 
+## System Architecture
+```
++--------------+      +------------------+      +-------------+      +--------------+
+| Iris dataset | ---> | Preprocessing &  | ---> | Scikit-learn| ---> | Decision tree|
+|              |      | feature extraction|     | library     |      | model        |
++--------------+      +------------------+      +-------------+      +--------------+
+                                                                                      |
+                                                                                      v
++--------------+      +------------------+      +-------------+      +--------------+
+| Decision tree| ---> | Rust code        | ---> | Rust code   | ---> | RISC Zero    |
+| model        |      | converter        |      | (converted  |      | guest        |
+|              |      |                  |      | model)      |      |              |
++--------------+      +------------------+      +-------------+      +--------------+
+                                                                                      |
+                                                                                      v
++--------------+      +------------------+      +-------------+      +--------------+
+| Reading &    | <--- | Requesting proofs| <--- | Verifying   | <--- | RISC Zero    |
+| serializing  |      |                  |      | proofs      |      | host-side    |
+| sampled data |      +------------------+      +-------------+      | modules      |
++--------------+                                     |               +--------------+
+                                                     v
++--------------+      +------------------+      +-------------+
+| Proofs       | <--- | Files &         | <--- | Zero-        |
+| generation   |      | receipts         |      | knowledge VM |
+|              |      |                  |      | (zkVM)       |
++--------------+      +------------------+      +-------------+
+          |
+          v
++--------------+      +------------------+
+| Decision tree| ---> | Data security &  |
+| proofs       |      | privacy          |
++--------------+      +------------------+
+
+```
+
 ## Use Cases
 
 ZK-DTP can be employed in a wide range of applications and industries that require secure and privacy-preserving predictions. Some examples include:
