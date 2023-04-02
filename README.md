@@ -3,14 +3,14 @@
 ## Track
 RISC Zero bounty 1
 
-## Problem Statement:
+## Problem Statement
 In today's digital era, machine learning has become an essential tool for solving complex problems and making data-driven decisions. However, using ML models for sensitive applications can lead to privacy concerns and the potential for data leakage. This becomes especially challenging when the ML model provider needs to offer predictions without disclosing their proprietary model's critical attributes and thresholds. Traditional approaches for sharing ML models expose these sensitive details, making it difficult to strike a balance between functionality and privacy.
 
-## Solution:
+## Solution
 
 Zero-KnowLedge Decision Tree Prediction (ZK-DTP) is designed to address this pressing issue by offering privacy-preserving predictions using decision tree models, built on top of RISC Zero's zkVM technology. ZK-DTP enables ML model providers to generate accurate predictions without revealing any sensitive information about the model or the input data.
 
-## Use Cases:
+## Use Cases
 
 ZK-DTP can be employed in a wide range of applications and industries that require secure and privacy-preserving predictions. Some examples include:
 
@@ -24,7 +24,7 @@ Marketing: Leverage customer data for targeted advertising and personalization w
 
 Smart Cities: Utilize ZK-DTP to make data-driven decisions for urban planning, resource management, and environmental monitoring, while ensuring the confidentiality of sensitive data and the underlying ML models.
 
-## Benefits:
+## Benefits
 
 ZK-DTP revolutionizes the way ML models are used in sensitive applications by offering the following advantages:
 
@@ -37,6 +37,8 @@ Ease of Integration: Built on top of RISC Zero's zkVM, ZK-DTP seamlessly integra
 Scalability: ZK-DTP supports various decision tree models and can be easily adapted to different use-cases and industries, making it a versatile and scalable solution for privacy-preserving predictions.
 
 ## Quick Start
+![Decision tree generated from iris dataset.](./decision_tree_iris.png)
+![Decision surface generated from iris dataset.](./decision_surface.png)
 In this demo, we provide two projects, one is plot_iris_dtc.ipynb for classifying iris using scikit-learn. This is a Jupyter Notebook file, which includes not only training and using decision trees, but also a newly designed converter tree_to_code(tree, feature_names). This function can generate the Rust code from the trained decision tree. This file can be run on most Jupyter Notebook.
 
 Another project MYPROJECT is used to prove and validate the results of decision trees querying iris species based on features on RISC Zero's zkVM. Then we will show how to build and excute this project.
