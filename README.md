@@ -60,8 +60,11 @@ Ease of Integration: Built on top of RISC Zero's zkVM, ZK-DTP seamlessly integra
 Scalability: ZK-DTP supports various decision tree models and can be easily adapted to different use-cases and industries, making it a versatile and scalable solution for privacy-preserving predictions.
 
 ## Quick Start
+
 ![Decision tree generated from iris dataset.](./decision_tree_iris.png)
+
 ![Decision surface generated from iris dataset.](./decision_surface.png)
+
 In this demo, we provide two projects, one is plot_iris_dtc.ipynb for classifying iris using scikit-learn. This is a Jupyter Notebook file, which includes not only training and using decision trees, but also a newly designed converter tree_to_code(tree, feature_names). This function can generate the Rust code from the trained decision tree. This file can be run on most Jupyter Notebook.
 
 Another project MYPROJECT is used to prove and validate the results of decision trees querying iris species based on features on RISC Zero's zkVM. Then we will show how to build and excute this project.
@@ -92,12 +95,14 @@ Using these four features, ./methods/guest/src/bin/prediction.rs can identify th
     Features            real, positive
     =================   ==============
 
+
 ![Iris dataset.](./iris_dataset.png)
+
 
 Then the host can verify the excucation results with the help of receipt and journal.
 
 ## Video Tutorial
-For a video demo, check out this [excerpt from our workshop at ZK HACK III](https://www.youtube.com/watch?v=Yg_BGqj_6lg&list=PLcPzhUaCxlCgig7ofeARMPwQ8vbuD6hC5&index=5).
+For a video demo, check out this [DEMO](https://youtu.be/LE9eFDRjSYo).
 
 
 *This work is build with the RISC Zero Rust Starter Template.*
