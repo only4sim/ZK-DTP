@@ -67,6 +67,8 @@ Using these four features, ./methods/guest/src/bin/prediction.rs can identify th
     Features            real, positive
     =================   ==============
 
+![Iris dataset.](./iris_dataset.png)
+
 Then the host can verify the excucation results with the help of receipt and journal.
 
 ## Video Tutorial
