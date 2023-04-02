@@ -1,5 +1,9 @@
 # Zero Knowledge Decision Tree Prediction (ZK-DTP)
 
+## Track
+RISC Zero bounty 1
+
+## Problem Statement:
 In today's digital era, machine learning has become an essential tool for solving complex problems and making data-driven decisions. However, using ML models for sensitive applications can lead to privacy concerns and the potential for data leakage. This becomes especially challenging when the ML model provider needs to offer predictions without disclosing their proprietary model's critical attributes and thresholds. Traditional approaches for sharing ML models expose these sensitive details, making it difficult to strike a balance between functionality and privacy.
 
 ## Solution:
@@ -66,7 +70,7 @@ Using these four features, ./methods/guest/src/bin/prediction.rs can identify th
 Then the host can verify the excucation results with the help of receipt and journal.
 
 ## Video Tutorial
-For a walk-through of how to build with this template, check out this [excerpt from our workshop at ZK HACK III](https://www.youtube.com/watch?v=Yg_BGqj_6lg&list=PLcPzhUaCxlCgig7ofeARMPwQ8vbuD6hC5&index=5).
+For a video demo, check out this [excerpt from our workshop at ZK HACK III](https://www.youtube.com/watch?v=Yg_BGqj_6lg&list=PLcPzhUaCxlCgig7ofeARMPwQ8vbuD6hC5&index=5).
 
 
 *This work is build with the RISC Zero Rust Starter Template.*
